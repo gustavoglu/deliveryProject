@@ -71,6 +71,7 @@ namespace ProjectDelivery.Services.Api
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "Delivery API v1");
             });
 
+            app.UseCors(c => { c.AllowAnyHeader(); c.AllowAnyMethod(); c.AllowAnyOrigin(); });
             app.UseAuthentication();
             app.UseMvc();
          
